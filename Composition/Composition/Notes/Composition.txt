@@ -1,0 +1,34 @@
+What is composition?
+
+Composition is also a kind of relationship between two classes that allows one to contain the other..
+It is referred as Has-A relationship
+
+Ex: Car Has-A Engine
+
+Benefits:
+
+- Code re-use
+- Flexibility
+- Loose coupling
+
+Ex: DBMigrator requires logging
+	Installer requires logging
+Logging is common...Create a logger 
+
+In UML it is indicated by a diamond sign..
+
+Syntax:
+
+When creating a class sometimes we create private fields..If we need composition then, the related class is the private field in composite class
+
+Ex:
+
+public class Installer
+{
+	private Logger _logger;
+
+	public Installer(Logger logger)
+	{
+		this._logger = logger;
+	}
+}
