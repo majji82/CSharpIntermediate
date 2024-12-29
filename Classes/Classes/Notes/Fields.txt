@@ -1,0 +1,28 @@
+What?
+
+Field is like a variable that we declare at class levl and we store details/data about the class...
+
+Initialization:
+
+public class Customer
+{
+	List<Order> Orders;
+	public Customer()
+	{
+		Orders = new List<Order>();
+	}
+}
+
+We can also directly initalize..
+
+public class Customer
+{
+	List<Order> Orders = new List<Order>();
+}
+
+What is readonly?
+
+readonly List<Order> Orders = new List<Order>();
+
+readonly modifier is used to assign the value only once...
+Why do we need? To increase safety..

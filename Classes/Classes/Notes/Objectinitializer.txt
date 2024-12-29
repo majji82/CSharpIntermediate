@@ -1,0 +1,22 @@
+What?
+
+Object Initializer is quickly initializing object without the need to call one of its constructors
+
+Why?
+
+Avoid creating multiple constructors..
+
+public class Person()
+{
+	public int id;
+	public string FirstName;
+	public string LastName;
+}
+
+Syntax:
+
+var person = new Person
+{
+	FirstName = "Majji",
+	LastName = "Janardhan"
+};

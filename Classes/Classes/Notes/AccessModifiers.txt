@@ -1,0 +1,60 @@
+Access Modifiers:
+
+public, private, protected, internal, protected internal
+
+What?
+Access modifier is a way to control access to a class and/or its members..
+
+Why?
+To create safety in our programs..
+
+How?
+public class Customer
+{
+	private string Name;
+}
+
+var john = new Customer();
+john.name; // won't compile..
+
+Why do we need it?
+
+Object Oriented Programming:
+
+=> Encapsulation/ Information Hiding
+=> Inheritence
+=> Polymorphism
+
+Encapsulation:
+
+Analogy:
+	At restaurent we have many roles like waitress, manager, cashier, chef etc.. The waitress takes the order and passes it to the chef. The chef does the meal and notifies waitress when it is ready. The chef job is cooking food and waitress is not involved in it..Each role is responsible for their own things..
+	
+	Similarly in our applications we have classes where each class is responsible for their own job.. These classes collaborate to perform functionality of the application.. The classes must hide some information about how they perform their functionality..We don't want classes to know the details of other classes...This is called encapsulation
+
+How do we apply encapsulation?
+
+- Define fields as private
+- provide getter and setter methods as public..
+
+Ex:
+
+public class Person
+{
+	private string Name;
+
+	public void SetName(string name)
+	{
+		if(!String.IsNullOrEmpty(name))
+			this.name = name;
+	}
+
+	public string GetName()
+	{
+		return Name;
+	}
+}
+
+camelCase: parameterNames
+PascalCase: ClassName, MethodNames
+private:	_camelCase

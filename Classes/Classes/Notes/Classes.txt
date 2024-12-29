@@ -1,0 +1,96 @@
+What is a class?
+
+A class is basically building block of a software application..An application consists of multiple classes each responsible for particular behaviour in the application..All these classes together will provide the behaviour expected from the application.
+
+Ex:
+
+Assume we are building a webapp like blog. Almost every basic webapp contains Presentation layer, Business Logic and Data access/ Persistence layer. Each layer have classes each responsible for something particular.
+For example let's say 
+=> Presentation layer contains a PostView which is responsible for displaying a post to the user. 
+=> The Business layer contains the Post itself. 
+=> The persistence layer contains the PostRepository which can save the post in db or retrieve it from database.
+
+Anatomy:
+
+Class is defined by us and give it a responsibility depending on the type of application we are building and the layer the class belongs to...
+
+Class contains data and behaviour..
+Data => represented by fields
+Behaviour => represented by methods or functions
+
+Classes can be also represented by UML diagrams..
+In UML class has 3 parts: Name of class, fields (data), methods/functions
+
+Ex:
+
+Post
+
+Title: String
+Description: string
+DateTime: DateTime
+
+Publish()
+Like()
+Comment(message)
+
+Object:
+
+=> It is an instance of a class that resides in the memory
+=> If person is a class, then we have John, Mary and Scott as objects (instances of person)
+
+The class acts as a blueprint from which we can create objects..At runtime the objects talk to eachother and we get the behavior expected from the application
+
+Declaring class:
+
+public[access_modifier] class Person[name]
+{
+	// members of the class
+	public string Name;
+
+	public void Introduce()
+	{
+		Console.WriteLine("My name is Janardhan Majji");
+	}
+}
+
+Creating Objects:
+
+var person = new Person(); or
+Person person = new Person();
+
+Using Objects:
+
+person.name = "Janardhan";
+person.Introduce();
+
+Class members:
+
+Class members are fields and methods usually...
+In C# we have two types of class members..Instance and static..
+
+Instance members: Accesible from an object
+Ex:
+var p = new Person();
+p.Introduce();
+
+Static members: Accessible from class
+Ex:
+Console.WriteLine();
+
+Why do we use static members?
+
+=> To represent concepts that are singleton
+=> Ex: DateTime.Now, Console.WriteLine();
+
+Declaring static members:
+
+use static keyword.
+Ex: public static int peopleCount = 0;
+
+Naming conventions:
+
+PascalCase
+camelCase
+
+Classes in C# are written in PascalCase.
+ObjectNames in C# are written in camelCase.

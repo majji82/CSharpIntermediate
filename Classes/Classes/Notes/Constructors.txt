@@ -1,0 +1,64 @@
+What is a Constructor?
+
+A constructor is a method which is called when an instance of class (object) is created..
+
+Why?
+=> To initialize some of the fields of the class (put the object in an early state).
+
+How?
+
+class Customer
+{
+	public Customer()
+	{
+		// 
+	}
+}
+
+=> Constructor name is same as class name
+=> It doesn't have a return type, not even void..
+=> If we don't create any construcor, then C# compiler automatically creates a default constructor for us. 
+=> It will be in the IL
+=> It will sets the values to their default ones (for numbers => 0, for boolean => false, array, strings => null)
+
+Use of this keyword:
+
+class Customer
+{
+	public string Name;
+	public Customer(string name)
+	{
+		this.Name = name;
+	}
+}
+
+this keyword is used to access current Object.
+Used to eliminate the confusion between the member of class and parameters..
+
+this.Name refers to member of class...so that we always have them on left side and parameter name on right side.
+
+Overloading:
+Methods having same name with different signatures..
+
+Constructor Overloading:
+Constructors already have the same name..so if multiple constructors are created with diff signatures..it is constructor Overloading...
+
+What is signature?
+
+=> Signature uniquely identifies a method
+=> return type (not there for constuctor)
+=> name 
+=> no of parameters and type of parameters
+
+public Customer(){}
+public Customer(string name){}
+public Customer(string name, int id){}
+
+Why Constructor overloading?
+To make initialization easy...
+
+Note:
+Use constuctors only if we need to initialize the object to an early state..
+The best example is if we have something like list, we always have to initialize it... so in such a case constuctor is a must..
+
+If we need to initalize the members we already initialized in other constructor along with some new members we can use this() keyword..

@@ -1,0 +1,31 @@
+Property:
+
+It is a class member that encapsulates getter/setter for accesing a field..
+
+Why?
+
+To create getter/setter with less code..
+
+Proprty Syntax:
+
+=> Its dataType is same as the field dataType
+=> The name of Property must be in PascalCase
+
+public class Person
+{
+	private DateTime _birthDate;
+
+	public DateTime Birthdate
+	{
+		get{return _birthdate; }
+		set{_birthdate = value; }
+	}
+}
+
+Note: Here get and set are C# keywords...
+
+Auto Implemented properties:
+
+public DateTime Birthdate{get; set;}
+
+Note: All the auto-implemented properties must be on the top..

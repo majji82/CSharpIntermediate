@@ -1,0 +1,59 @@
+Methods:
+
+Signature of a method: which uniquely identifies a method/ description of how to call a method
+
+- Name of method
+- No of parameters
+- Type of parameters
+
+public void Move(int x, int y){}
+
+Method overLoading:
+
+Having a method with same name but with different signatures...
+
+public class Point
+{
+	public void Move(Point newLocation){}
+	public void Move(int x, int y){}
+}
+
+Overloading parameters of same type (Ex: add method)
+
+=> In such cases we can use array
+=>
+Ex: public int Add(int n1, int n2)
+	public int Add(int n1, int n2, int n3)
+
+	public int Add(int[] numbers)
+
+Problem with this is everytime we need to pass array of elements by creating a new array..
+Ex: cal.Add(new int[]{1,2,3,4,5});
+
+Params Modifier:
+
+To overcome this problem we use params modifier....
+
+public class Calculator
+{
+	public int Add(params int[] nums)
+	{
+	}
+}
+
+var result = cal.Add(1,2,3,4); 
+
+Note: Use params modifier when we really need a varying no of parameters..
+
+The Ref Modifier:
+
+We know that variables are of two types..value type and reference type...
+The value type donot change everywhere we pass it in a method...It just copies the value..original doesnot change..
+If we want the value type to behave as a reference type we use ref keyword...
+
+=> If a method contains ref modifier..we must also include ref keyword while calling the method...
+
+
+Out Modifier:
+
+---------
