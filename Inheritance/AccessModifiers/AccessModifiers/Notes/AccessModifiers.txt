@@ -1,0 +1,72 @@
+Access Modifiers:
+
+Why access modifiers are important?
+
+Metaphor: Black Box
+
+We donot know what is inside the black box..There is limited visibility...We need to design objects like a black box. There is limited visibility from outside but there must be lot going inside..
+
+Why?
+
+The more a class reveals about it's implementation, more risky it becomes when we change that class because there can be other parts of the system that can rely on its implementation..
+
+In C# we use access modifiers to control visibility of the members of the class.
+There are totally 5 access modifiers:
+
+=> Public
+=> Private
+=> protected
+=> internal
+=> protected internal	
+
+Public: accessible from everywhere
+
+public class Customer
+{
+	public void Promote()
+	{
+		// code
+	}
+}
+
+Customer c = new Customer();
+c.Promote(); // This can be accessed because of public 
+
+Private: only accessible from the class
+
+public class Customer
+{
+	private int CalculateRating()
+	{
+		// code
+	}
+}
+
+var customer = new Customer();
+customer.CalculateRating(); // This cannot be accessed...
+
+Protected: Only accessible from the class and its derived classes
+
+public class Customer
+{
+	protected int CalculateRating()
+	{
+		// code
+	}
+}
+
+var customer = new Customer();
+customer.CalculateRating(); // This cannot be accessed...
+
+Note: 
+	As protected access modifier reveals the implementation details to the derived classes avoid using protected and use private instead..
+
+internal access modifier:
+
+=> internal is often used with classes and not with members
+=> accessible from the same assembly...
+
+protected internal:
+
+=> accessible only from that assembly or any derived classes.
+=> Avoid using it...
