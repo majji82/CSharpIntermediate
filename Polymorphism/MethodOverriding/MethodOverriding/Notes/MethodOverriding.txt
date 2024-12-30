@@ -1,0 +1,50 @@
+Method Overriding
+Virtual and override keywords
+
+Method Overriding:
+	It is used to modify the implementation of an inherited method...
+
+Note:
+	Method overloading has the method with same name but different signatures...Over riding is about changing the implementation of an inherited method...
+
+Ex:
+
+public class Shape
+{
+	public void Draw()
+	{
+		// code
+	}
+}
+
+public class Circle: Shape
+{
+	// code
+}
+
+public class Image: Shape
+{
+	// code
+}
+
+Here the algo for drawing a circle and image is different..Hence we need to change the implementation of the Draw() method..
+For changing this we use virtual and override keywords..
+
+public class Shape
+{
+	public virtual void Draw()
+	{
+		// Default implementation
+	}
+}
+
+public class Circle : Shape
+{
+	public override void Draw()
+	{
+		// new implementation..
+	}
+}
+
+We use virtual keyword in the parent/base class and override keyword in the derived class..
+This is one way of achieving polymorphism..

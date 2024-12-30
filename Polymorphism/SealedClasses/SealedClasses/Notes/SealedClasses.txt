@@ -1,0 +1,9 @@
+Sealed Modifier:
+
+=> opposite to abstract classes
+=> sealed modifier prevents derivation of classes/ overriding of methods..
+=> can be applied to class/class members
+=> If it applied to class, prevents derivation of classes from that class.
+=> If applied to method, prevents overriding of that method...
+
+Avoid using sealed...Unless necessary..
